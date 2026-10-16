@@ -38,6 +38,38 @@ for ($i=1;$i<=$b;$i++){
 </head>
 <body>
     <table>
+        <tr> <th>Цифры/Произведения</th>
+            <?php for ($i=1;$i<=9;$i++) echo "<th>$i</th>"
+            ?>
+        </tr>
+        <tr> 
+           <?php
+        for ($d = 1; $d <= 9; $d++) {
+            echo "<tr>";
+            echo "<th>$d</th>"; 
+            for ($e = 1; $e <= 9; $e++) {
+                $square = $d * $e;
+                echo "<td>$square</td>";
+            }
+            echo "</tr>";
+        }?>
+
+        </tr>    
+          
+    </table>
+</body>
+</html>
+
+<h2>Задание 4</h2>
+<p>Вывести в виде HTML таблицу квадратов двузначных чисел</p>
+<style>
+        table { border-collapse: collapse; }
+        th, td { border: 1px solid #333; padding: 5px; text-align: center; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <table>
         <tr>
             <th>Десятки \ Единицы</th>
             <?php for ($e = 0; $e <= 9; $e++) echo "<th>$e</th>"; ?>
@@ -55,22 +87,7 @@ for ($i=1;$i<=$b;$i++){
             echo "</tr>";
         }
         ?>
-    </table>
-</body>
-</html>
 
-<h2>Задание 4</h2>
-<p>Вывести в виде HTML таблицу квадратов двузначных чисел</p>
-<?php
-echo "<table border='1' cellpadding='5' cellspacing='0'>";
-echo "<tr><th>Число</th><th>Число в квадрате</th></tr>";
-for ($i=10; $i<100; $i++) {
-    echo "<tr>";
-    echo "<td>" . $i . "</td>";
-    echo "<td>" . ($i **2 ) . "</td>";
-    echo "</tr>";
-}
-echo "</table>";?>
 <h1>Задание 5</h1>
 <p>Вывести на экран «прямоугольник», образованный из двух видов символов. Контур прямоугольника должен состоять из одного символа, а в «заливка» — из другого. Даны размеры прямоугольника а и в.</p>
 <?php
