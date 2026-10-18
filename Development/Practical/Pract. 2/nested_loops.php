@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
 <h1>Вложенные циклы</h1>
 <h2>Задание 1</h2>
 <p>С помощью вложенных циклов вывести на экран таблицу умножения.</p>
@@ -27,8 +36,6 @@ for ($i=1;$i<=$b;$i++){
 }?>
 <h2>Задание 3</h2>
 <p>Реализовать задачу1 в виде именно HTML таблицы, ИСПОЛЬЗУЯ теги table> tr> td>. Размеры ячеек должны быть равными и у них должны быть границы.</p>
-<!DOCTYPE html>
-<html>
 <head>
     <style>
         table { border-collapse: collapse; }
@@ -62,7 +69,8 @@ for ($i=1;$i<=$b;$i++){
 
 <h2>Задание 4</h2>
 <p>Вывести в виде HTML таблицу квадратов двузначных чисел</p>
-<style>
+<head>
+    <style>
         table { border-collapse: collapse; }
         th, td { border: 1px solid #333; padding: 5px; text-align: center; }
         th { background-color: #f2f2f2; }
@@ -70,11 +78,10 @@ for ($i=1;$i<=$b;$i++){
 </head>
 <body>
     <table>
-        <tr>
-            <th>Десятки \ Единицы</th>
+        <tr><th>Десятки \ Единицы</th>
             <?php for ($e = 0; $e <= 9; $e++) echo "<th>$e</th>"; ?>
         </tr>
-        
+        <tr>
         <?php
         for ($d = 1; $d <= 9; $d++) {
             echo "<tr>";
@@ -85,8 +92,13 @@ for ($i=1;$i<=$b;$i++){
                 echo "<td>$square</td>";
             }
             echo "</tr>";
-        }
-        ?>
+        }?>
+        
+        </tr>
+
+       </table> 
+</body>
+</html>
 
 <h1>Задание 5</h1>
 <p>Вывести на экран «прямоугольник», образованный из двух видов символов. Контур прямоугольника должен состоять из одного символа, а в «заливка» — из другого. Даны размеры прямоугольника а и в.</p>
