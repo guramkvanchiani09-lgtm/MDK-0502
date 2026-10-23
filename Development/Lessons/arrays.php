@@ -15,7 +15,7 @@ for( $i= 0; $i< count($numer1); $i++ ){
 }?> <h2>Элементы массива</h2>
 <?php
 echo $numer1[0];//Первый элемент
-echo $numer1[0]='$$$';
+#echo $numer1[0]='$$$';
 ?> <h2>Добавление элемента</h2>
 <?php
 var_dump($numer1)
