@@ -62,5 +62,37 @@ echo implode(', ',AllDivisors($e))
 <p>Функция принимает массив чисел. Сделайте так, чтобы она возвращала сумму квадратов этих чисел.</p>
 <p>Массив=[2,3,4,5,6,7,8,9,10]</p>
 <?php
+function squareNumbers($w){
+    $res=0;
+    foreach($w as $wq){
+        $res+=$wq**2;
+    }
+    return $res;
+}
+$M=[2,3,4,5,6,7,8,9,10];
+$result=squareNumbers($M);
+echo $result
+?><h2>Задание 6</h2>
+<p>Массив=['Ехал','студент',' в дом с именем',['hello']]</p>
+<p></p>
+<?php
+function convertToString($e){
+    $res=[];
+    foreach ($d as $ds){
+        if (is_array($ds)){
+            $res .= 'array';
+        }else{
+            $res .= $ds . ' ';
+        }
+    }
+    return $res;
+}
+$array=['Ехал','студент',' в дом с именем',['hello']];
+echo convertToString($array)
+?><h2>Задание 7</h2>
+<p>
+    
+</p>
+<?php
 
 ?>
