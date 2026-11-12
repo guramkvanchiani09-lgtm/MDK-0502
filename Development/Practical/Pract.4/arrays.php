@@ -138,4 +138,4 @@ for ($i = 0; $i < count($arr) - 1; $i++) {
     if ($arr[$i] == $arr[$i + 1]) {
         $pairs++;
         $i++;}
-}echo "Количество пар: $pairs";
+}echo "Количество пар: $pairs";?>
