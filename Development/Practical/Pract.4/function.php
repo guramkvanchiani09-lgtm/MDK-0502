@@ -77,7 +77,7 @@ echo $result
 <p></p>
 <?php
 function convertToString($e){
-    $res=[];
+    $res='';
     foreach ($e as $ds){
         if (is_array($ds)){
             $res .= 'array';
@@ -93,3 +93,15 @@ echo convertToString($array)
 <p>Прочитайте в приложенных материалах про функции с переменным количеством параметров.
 
 Сделайте функцию, которая принимает переменное количество строк и возвращает их общую длину.</p>
+<?php
+function varible(...$line){
+    $totalLength = 0;
+    foreach($line as $line){
+        if(is_string($line)){
+            $totalLength +=strlen($line);
+        } 
+    } return $totalLength;
+}
+$a=('Hello'.' '.'word'.' '.'!');
+echo varible($a)
+?>
