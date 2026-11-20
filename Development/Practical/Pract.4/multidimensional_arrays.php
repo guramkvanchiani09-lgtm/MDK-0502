@@ -137,10 +137,6 @@ if (($shop[$targetCategory])) {
     $shop[$targetCategory] = array_merge($shop[$targetCategory], $newProducts);
 }
 
-//echo "<pre>";
-//print_r($shop);
-//echo "</pre>";
-
 foreach ($shop as $category => $items) {
     echo "<b>$category:</b><br>";
     if (empty($items)) {
